@@ -14,7 +14,7 @@ public class ProductController {
     private ProductService productService;
     //Para acceder a laos metodos avanzados del servicio
 
-    @GetMapping("/")
+    @GetMapping(value = {"/",""})
     //Model es el objeto que Spring usa para pasar ala vista (html) las variables que queremos
     public String showProducts(Model model) {
         model.addAttribute("products", productService.findAll());
